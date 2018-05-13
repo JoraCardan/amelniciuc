@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>arrows</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-1323.000000, -932.000000)" fill-rule="nonzero" fill="#494949">
+            <g id="arrows" transform="translate(1334.000000, 943.000000) rotate(-90.000000) translate(-1334.000000, -943.000000) translate(1323.000000, 932.000000)">
+                <polygon id="Shape" points="22 9.625 5.225 9.625 12.925 1.925 11 0 0 11 11 22 12.925 20.075 5.225 12.375 22 12.375"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+body {
+  background-color: palette(black);
+  color: palette(white);
+  font-family: $base-font;
+  font-size: $base-font-size;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: currentColor;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}

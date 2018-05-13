@@ -1,0 +1,47 @@
+// sass-lint:disable-all
+
+// Globalize Z axis Indexes to avoid unmanageable values
+$z-index-behind: -1;
+$z-index-1: 10;
+$z-index-2: 20;
+$z-index-3: 30;
+$z-index-4: 40;
+$z-index-5: 50;
+$z-index-over: 200;
+
+// fonts
+$base-font-size: 16px;
+$base-font: sans-serif;
+
+// Screen breakpoints
+// ==============================
+$screen-xxs: 20em;
+$screen-xs: 30rem;
+$screen-sm: 48rem;
+$screen-md: 64rem;
+$screen-lg: 75rem;
+
+$transition-time: .3s;
+
+
+// Usage: palette($palette, $tone: 'base');
+// Example: color: palette(white, off);
+$palettes: (
+  white: (
+    base: #FFFFFF,
+    off: #EDEEEF,
+  ),
+  black: (
+    base: #1A1A1D,
+    true: #000000,
+    text: #2C3E50,
+  ),
+  grey: (
+    base: #E0E0E1,
+    text: #8D8D8D,
+    link: #494949,
+  ),
+  transparent:(
+    base:transparent
+  )
+);
