@@ -2,7 +2,7 @@
 @import url(~normalize.css);
 body {
   background-color: #1A1A1D;
-  color: #8D8D8D;
+  color: #8d8d8d;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -51,6 +51,8 @@ h1, h2, h3, h4, h5, h6 {
   .icon--size-inherit svg {
     height: 1em;
     width: 1em; }
+  .icon--size-auto svg {
+    height: 1em; }
   .icon--color-white rect,
   .icon--color-white polygon,
   .icon--color-white circle,
@@ -65,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
   .icon--color-grey polygon,
   .icon--color-grey circle,
   .icon--color-grey path {
-    fill: #E0E0E1; }
+    fill: #e0e0e1; }
   .icon--color-current rect,
   .icon--color-current polygon,
   .icon--color-current circle,
@@ -73,6 +75,36 @@ h1, h2, h3, h4, h5, h6 {
     fill: currentColor; }
   .icon svg {
     object-fit: contain; }
+
+.content {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin: 0; }
+  @media screen and (min-width: 48rem) {
+    .content {
+      font-size: 1.875rem;
+      line-height: 3.25rem; } }
+
+.title {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  margin: .75rem 0; }
+  @media screen and (min-width: 48rem) {
+    .title {
+      font-size: 3.4375rem;
+      line-height: 4.875rem; } }
+
+.section--viewport {
+  min-height: 100vh; }
+
+.section--center {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 100%; }
+
+.section--negate-header {
+  margin-top: -112px; }
 
 .header__container {
   box-sizing: border-box;
@@ -87,6 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header__logo-link {
   color: #FFFFFF;
+  font-size: 1.75rem;
   font-weight: 800;
   text-decoration: none;
   transition: color 0.3s; }
@@ -96,19 +129,14 @@ h1, h2, h3, h4, h5, h6 {
 .header__nav {
   flex-grow: 1; }
 
-.footer__title {
-  font-size: 2.4rem; }
-  @media screen and (min-width: 48rem) {
-    .footer__title {
-      font-size: 3.43rem; } }
-
-.footer__content {
-  font-size: 1.2rem;
-  line-height: 2rem; }
-  @media screen and (min-width: 48rem) {
-    .footer__content {
-      font-size: 1.875rem;
-      line-height: 3.25rem; } }
+.footer {
+  margin-bottom: 10rem;
+  margin-top: 20rem; }
+  .footer__content {
+    margin: 0 0 2.5rem; }
+  .footer__author {
+    color: #494949;
+    margin-top: 6rem; }
 
 .main-nav {
   display: flex;
@@ -132,7 +160,79 @@ h1, h2, h3, h4, h5, h6 {
   .social--start {
     justify-content: flex-start; }
   .social__link {
+    color: #FFFFFF;
     padding: 0 .5rem;
     transition: color 0.3s; }
     .social__link:hover {
-      color: #FFFFFF; }
+      color: #494949; }
+
+.home__content {
+  max-width: 47.125rem; }
+  .home__content .icon {
+    position: relative;
+    top: 3px; }
+
+.proj__item {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%; }
+  @media screen and (min-width: 48rem) {
+    .proj__item {
+      flex-flow: row nowrap; } }
+
+.proj__img {
+  background-color: #2a2a2a;
+  padding-bottom: 39.57%;
+  width: 100%; }
+  @media screen and (min-width: 48rem) {
+    .proj__img {
+      width: 56.43%; } }
+
+.proj__info {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  position: relative; }
+  @media screen and (min-width: 48rem) {
+    .proj__info {
+      padding-left: 3.4375rem; } }
+
+.proj__title {
+  margin: .75rem 0 1rem; }
+
+.proj__hover {
+  bottom: 0;
+  color: #FFFFFF;
+  opacity: 0;
+  position: relative;
+  transform: translateY(2rem);
+  transition: transform 0.3s, opacity 0.3s; }
+  .proj__hover .icon {
+    margin-left: .5rem;
+    transform: rotate(-90deg); }
+
+.proj__main-info {
+  transition: transform 0.3s; }
+  @media screen and (min-width: 48rem) {
+    .proj__main-info {
+      transform: translateY(50%); } }
+  @media screen and (min-width: 64rem) {
+    .proj__main-info {
+      transform: translateY(75%); } }
+  @media screen and (min-width: 75rem) {
+    .proj__main-info {
+      transform: translateY(100%); } }
+
+.proj__link {
+  display: block;
+  margin-bottom: 5rem;
+  text-decoration: none; }
+  .proj__link:last-child {
+    margin-bottom: 0; }
+  .proj__link:hover .proj__hover {
+    opacity: 1;
+    transform: translateY(0); }
+  .proj__link:hover .proj__main-info {
+    transform: translateY(0%); }

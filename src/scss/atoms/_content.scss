@@ -1,5 +1,10 @@
-// .content {
-//   &__title {
+.content {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin: 0;
 
-//   }
-// }
+  @include breakpoint(sm) {
+    font-size: 1.875rem;
+    line-height: 3.25rem;
+  }
+}

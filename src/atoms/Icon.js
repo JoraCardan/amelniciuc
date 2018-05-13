@@ -7,7 +7,7 @@ export default class Icon extends PureComponent {
   static defaultProps = {
     name: 'menu',
     size: 'inherit',
-    color: 'black',
+    color: 'inherit',
   }
   render() {
     // eslint-disable-next-line
@@ -35,12 +35,14 @@ Icon.propTypes = {
     'envelope'
   ]).isRequired,
   size: PropTypes.oneOf([
+    'auto',
     'inherit',
     'small',
     'medium',
     'large',
   ]),
   color: PropTypes.oneOf([
+    'inherit',
     'white',
     'black',
     'grey',

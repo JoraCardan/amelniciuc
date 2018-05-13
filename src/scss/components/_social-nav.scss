@@ -8,11 +8,12 @@
   }
 
   &__link {
+    color: palette(white);
     padding: 0 .5rem;
     transition: color $transition-time;
 
     &:hover {
-      color: palette(white);
+      color: palette(grey, link);
     }
   }
 }
