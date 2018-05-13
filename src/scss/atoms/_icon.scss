@@ -1,0 +1,79 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+
+  rect,
+  polygon,
+  circle,
+  path {
+    transition: fill $transition-time;
+  }
+
+  &--size-small {
+    svg {
+      height: .625rem;
+      width: .625rem;
+    }
+  }
+
+  &--size-medium {
+    svg {
+      height: 1rem;
+      width: 1rem;
+    }
+  }
+
+  &--size-large {
+    svg {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  &--size-inherit {
+    svg {
+      height: 1em;
+      width: 1em;
+    }
+  }
+
+  &--color-white {
+    rect,
+    polygon,
+    circle,
+    path {
+      fill: palette(white);
+    }
+  }
+
+  &--color-black {
+    rect,
+    polygon,
+    circle,
+    path {
+      fill: palette(black);
+    }
+  }
+
+  &--color-grey {
+    rect,
+    polygon,
+    circle,
+    path {
+      fill: palette(grey);
+    }
+  }
+
+  &--color-current {
+    rect,
+    polygon,
+    circle,
+    path {
+      fill: currentColor;
+    }
+  }
+
+  svg {
+    object-fit: contain;
+  }
+}

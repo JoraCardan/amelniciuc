@@ -43,9 +43,6 @@ Icon.propTypes = {
     'white',
     'black',
     'grey',
-    'green',
-    'facebook',
-    'twitter',
     'current',
   ]),
 };

@@ -14,3 +14,46 @@ a {
 ul {
   list-style: none;
   padding: 0; }
+
+.icon {
+  display: inline-block;
+  vertical-align: middle; }
+  .icon rect,
+  .icon polygon,
+  .icon circle,
+  .icon path {
+    transition: fill 0.3s; }
+  .icon--size-small svg {
+    height: .625rem;
+    width: .625rem; }
+  .icon--size-medium svg {
+    height: 1rem;
+    width: 1rem; }
+  .icon--size-large svg {
+    height: 2rem;
+    width: 2rem; }
+  .icon--size-inherit svg {
+    height: 1em;
+    width: 1em; }
+  .icon--color-white rect,
+  .icon--color-white polygon,
+  .icon--color-white circle,
+  .icon--color-white path {
+    fill: #FFFFFF; }
+  .icon--color-black rect,
+  .icon--color-black polygon,
+  .icon--color-black circle,
+  .icon--color-black path {
+    fill: #1A1A1D; }
+  .icon--color-grey rect,
+  .icon--color-grey polygon,
+  .icon--color-grey circle,
+  .icon--color-grey path {
+    fill: #E0E0E1; }
+  .icon--color-current rect,
+  .icon--color-current polygon,
+  .icon--color-current circle,
+  .icon--color-current path {
+    fill: currentColor; }
+  .icon svg {
+    object-fit: contain; }
