@@ -1,0 +1,19 @@
+.main-nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin: 0;
+
+  &__item {
+    margin-right: 4rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    transition: color $transition-time;
+
+    &:hover {
+      color: palette(white);
+    }
+  }
+}

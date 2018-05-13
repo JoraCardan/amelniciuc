@@ -1,9 +1,11 @@
 body {
   background-color: palette(black);
-  color: palette(white);
+  color: palette(grey, text);
   font-family: $base-font;
   font-size: $base-font-size;
+  font-weight: 400;
   margin: 0;
+  min-width: $screen-xxs;
   padding: 0;
 }
 
@@ -14,4 +16,9 @@ a {
 ul {
   list-style: none;
   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  color: palette(white);
 }

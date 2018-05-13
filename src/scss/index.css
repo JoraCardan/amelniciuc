@@ -2,10 +2,12 @@
 @import url(~normalize.css);
 body {
   background-color: #1A1A1D;
-  color: #FFFFFF;
-  font-family: sans-serif;
+  color: #8D8D8D;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
+  font-weight: 400;
   margin: 0;
+  min-width: 20em;
   padding: 0; }
 
 a {
@@ -14,6 +16,16 @@ a {
 ul {
   list-style: none;
   padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  color: #FFFFFF; }
+
+.container {
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 1rem 5%;
+  width: 100%; }
 
 .icon {
   display: inline-block;
@@ -57,3 +69,35 @@ ul {
     fill: currentColor; }
   .icon svg {
     object-fit: contain; }
+
+.header__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start; }
+
+.header__logo {
+  margin-right: 5rem; }
+
+.header__logo-link {
+  color: #FFFFFF;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 0.3s; }
+  .header__logo-link:hover {
+    color: #494949; }
+
+.header__nav {
+  flex-grow: 1; }
+
+.main-nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin: 0; }
+  .main-nav__item {
+    margin-right: 4rem; }
+  .main-nav__link {
+    text-decoration: none;
+    transition: color 0.3s; }
+    .main-nav__link:hover {
+      color: #FFFFFF; }

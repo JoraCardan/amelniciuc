@@ -7,15 +7,17 @@ export default class Header extends Component {
   render() {
     return (
       <div className="header">
-        <div className="logo">
-          <Link
-            to="/"
-            title="Alexandra Melniciuc"
-            className="logo__link"
-          >A.M.</Link>
-        </div>
-        <div className="header__nav">
-          <MainNav />
+        <div className="container header__container">
+          <div className="header__logo">
+            <Link
+              to="/"
+              title="Alexandra Melniciuc"
+              className="header__logo-link"
+            >AM.</Link>
+          </div>
+          <div className="header__nav">
+            <MainNav />
+          </div>
         </div>
       </div>
     )

@@ -11,7 +11,9 @@ $z-index-over: 200;
 
 // fonts
 $base-font-size: 16px;
-$base-font: sans-serif;
+// font-weight available: 400,800
+$base-font: 'Montserrat', sans-serif;
+
 
 // Screen breakpoints
 // ==============================
@@ -34,7 +36,6 @@ $palettes: (
   black: (
     base: #1A1A1D,
     true: #000000,
-    text: #2C3E50,
   ),
   grey: (
     base: #E0E0E1,
