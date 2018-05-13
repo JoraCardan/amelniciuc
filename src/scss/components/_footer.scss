@@ -1,0 +1,19 @@
+.footer {
+  &__title {
+    font-size: 2.4rem;
+
+    @include breakpoint(sm) {
+      font-size: 3.43rem;
+    }
+  }
+
+  &__content {
+    font-size: 1.2rem;
+    line-height: 2rem;
+
+    @include breakpoint(sm) {
+      font-size: 1.875rem;
+      line-height: 3.25rem;
+    }
+  }
+}
