@@ -1,0 +1,18 @@
+.social {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  &--start {
+    justify-content: flex-start;
+  }
+
+  &__link {
+    padding: 0 .5rem;
+    transition: color $transition-time;
+
+    &:hover {
+      color: palette(white);
+    }
+  }
+}

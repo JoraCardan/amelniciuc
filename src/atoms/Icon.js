@@ -31,7 +31,8 @@ Icon.propTypes = {
     'forms',
     'instagram',
     'linkedin',
-    'type'
+    'type',
+    'envelope'
   ]).isRequired,
   size: PropTypes.oneOf([
     'inherit',

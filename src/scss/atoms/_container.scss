@@ -1,6 +1,10 @@
 .container {
   box-sizing: border-box;
   overflow: hidden;
-  padding: 1rem 5%;
+  padding: 0 9%;
   width: 100%;
+
+  @include breakpoint(sm) {
+    padding: 0 18.7%;
+  }
 }
