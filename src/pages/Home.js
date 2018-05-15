@@ -5,7 +5,7 @@ import ProjectList from '../components/ProjectList';
 
 const Home = () => (
   <div className="home">
-    <section className="section section--viewport section--center section--negate-header">
+    <section className="section section--viewport section--center">
       <h2 className="title">Hello there!</h2>
       <h2 className="title">
         I'm Alexandra Melniciuc &mdash;<br/>

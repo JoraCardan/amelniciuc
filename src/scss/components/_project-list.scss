@@ -1,90 +1,141 @@
 .proj {
+  @include clearfix;
+  margin: 15rem 0 0;
+
   &__item {
     align-items: stretch;
     display: flex;
     flex-flow: column wrap;
+    // overflow: hidden;
+    position: relative;
     width: 100%;
 
+    &::before {
+      box-shadow: 0 0 30px 0 palette(black, shadow);
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transform: scale(.6);
+      transition: transform $transition-time, opacity $transition-time 0s;
+      width: 100%;
+      z-index: $z-index-1;
+    }
+
+    &--first {
+      font-size: 3.125rem;
+      padding: 6rem 0;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &--last {
+      padding: 6rem 0;
+
+      &::before {
+        display: none;
+      }
+    }
 
     @include breakpoint(sm) {
-      flex-flow: row nowrap;
+      float: left;
+      width: 50%;
+
+      &:nth-child(2n) {
+        float: right;
+      }
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+        transform: scale(1);
+        transition: transform $transition-time, opacity $transition-time .2s;
+      }
+
+      .proj__main-info {
+        transform: translateY(0%);
+      }
+
+      .proj__count {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .proj__info {
+        opacity: 1;
+      }
     }
   }
 
   &__img {
     background-color: palette(grey, img);
-    padding-bottom: 39.57%;
+    padding-bottom: 100%;
     width: 100%;
-
-    @include breakpoint(sm) {
-      width: 56.43%;
-    }
   }
 
   &__info {
     box-sizing: border-box;
     display: flex;
     flex-flow: column nowrap;
+    height: 100%;
     justify-content: space-between;
-    position: relative;
+    left: 0;
+    opacity: 0;
+    padding: 4rem 0 4rem 3.125rem;
+    position: absolute;
+    top: 0;
+    transition: opacity $transition-time;
+    width: 100%;
+  }
 
-    @include breakpoint(sm) {
-      padding-left: 3.4375rem;
-    }
+  &__count {
+    color: palette(grey, link);
+    font-size: 1.25rem;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: transform $transition-time, opacity $transition-time .1s;
+  }
+
+  &__type {
+    color: palette(grey, text);
+    font-size: 1.25rem;
+    margin: 0 0 .5rem;
   }
 
   &__title {
-    margin: .75rem 0 1rem;
-  }
-
-  &__hover {
-    bottom: 0;
     color: palette(white);
-    opacity: 0;
-    position: relative;
-    transform: translateY(2rem);
-    transition: transform $transition-time, opacity $transition-time;
+    font-size: 2.25rem;
 
     .icon {
-      margin-left: .5rem;
+      font-size: 1.375rem;
+      margin-left: 1rem;
       transform: rotate(-90deg);
     }
   }
 
   &__main-info {
+    transform: translateY(50%);
     transition: transform $transition-time;
-
-    @include breakpoint(sm) {
-      transform: translateY(50%);
-    }
-
-    @include breakpoint(md) {
-      transform: translateY(75%);
-    }
-
-    @include breakpoint(lg) {
-      transform: translateY(100%);
-    }
   }
 
   &__link {
     display: block;
-    margin-bottom: 5rem;
+    height: 100%;
+    left: 0;
+    position: absolute;
     text-decoration: none;
+    top: 0;
+    width: 100%;
+    z-index: $z-index-2;
+  }
 
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    &:hover {
-      .proj__hover {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .proj__main-info {
-        transform: translateY(0%);
-      }
-    }
+  &__sect-title {
+    margin: 0;
   }
 }

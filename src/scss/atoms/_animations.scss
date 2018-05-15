@@ -1,0 +1,36 @@
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slide {
+
+  &-enter {
+    animation: fadeInRight $transition-time forwards;
+  }
+
+  &-exit {
+    animation: fadeOutLeft $transition-time forwards;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}

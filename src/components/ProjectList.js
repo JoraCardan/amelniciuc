@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import Icon from '../atoms/Icon';
 import { formatNumber } from '../helpers';
@@ -33,29 +34,93 @@ const PROJECTS = [
     type: 'Mobile App & Website',
     url: '/portfolio/tradesquare',
   },
+  {
+    id: 5,
+    image: '',
+    title: 'Tap Battle',
+    type: 'Mobile Game',
+    url: '/portfolio/tap-battle',
+  },
 ];
 
 const ProjectItem = props => (
-  <Link className="proj__link" to={props.url}>
-    <div className="proj__item">
-      <div className="proj__img"></div>
-      <div className="proj__info">
-        <p className="content">{formatNumber(props.index)}.</p>
-        <div className="proj__main-info">
-          <p className="proj__type">{props.type}</p>
-          <h2 className="proj__title">{props.title}</h2>
-        </div>
-        <div className="proj__hover">Case Study <Icon name="arrow_down" color="current" /></div>
+  <div className="proj__item">
+    <Link className="proj__link" to={props.url}></Link>
+    <div className="proj__img"></div>
+    <div className="proj__info">
+      <div className="proj__count">{formatNumber(props.index)}.</div>
+      <div className="proj__main-info">
+        <p className="proj__type">{props.type}</p>
+        <h2 className="proj__title">{props.title} <Icon name="arrow_down" color="current" /></h2>
       </div>
     </div>
-  </Link>
+  </div>
 );
 
 class ProjectList extends Component {
+  state = {
+    projects: PROJECTS,
+  }
+
+  addProjects = () => {
+    const projects = this.state.projects.concat();
+
+    for (let i = 0; i < 5; i++) {
+      projects.push({
+        id: (projects.length + Math.random() * 100),
+        image: '',
+        title: 'Tap Battle',
+        type: 'Mobile Game',
+        url: '/portfolio/tap-battle',
+      });
+    }
+
+    return projects;
+  }
+
+  loadNext = () => {
+    console.log('called');
+    const prjs = this.addProjects();
+    console.log(prjs);
+
+    this.setState({
+      projects: prjs,
+    })
+  }
+
   render() {
     return (
       <div className="proj">
-        {PROJECTS.map((item, index) => <ProjectItem key={item.id} index={index + 1} {...item} />)}
+        <TransitionGroup>
+          <CSSTransition
+            key="0.5"
+            classNames="slide"
+            timeout={400}
+          >
+            <div className="proj__item proj__item--first">
+              <h2 className="proj__sect-title">Projects</h2>
+            </div>
+          </CSSTransition>
+
+          {this.state.projects.map((item, index) => (
+            <CSSTransition
+              key={item.id}
+              classNames="slide"
+              timeout={400}
+            >
+              <ProjectItem index={index + 1} {...item} />
+            </CSSTransition>
+          ))}
+          <CSSTransition
+            key="0.6"
+            classNames="slide"
+            timeout={400}
+          >
+            <div className="proj__item proj__item--last" onClick={this.loadNext}>
+              <button type="button" className="btn">Show more works <span className="btn__icon">+</span></button>
+            </div>
+          </CSSTransition>
+        </TransitionGroup>
       </div>
     )
   }

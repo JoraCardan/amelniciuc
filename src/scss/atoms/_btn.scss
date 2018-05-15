@@ -1,0 +1,24 @@
+.btn {
+  background-color: transparent;
+  border: 0;
+  color: palette(white);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.375rem;
+  outline: none;
+  position: relative;
+  z-index: $z-index-3;
+
+  &:hover {
+    .btn__icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    position: relative;
+    transform: rotate(0deg);
+    transition: transform $transition-time;
+  }
+}
